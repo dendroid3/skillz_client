@@ -1,11 +1,11 @@
 {
     "builds": [
       {
-        "src": "index.html",
+        "src": "dist/service-worker.js",
         "use": "@vercel/static"
       },
       {
-        "src": "dist/service-worker.js",
+        "src": "dist/*",
         "use": "@vercel/static"
       }
     ],
@@ -19,5 +19,5 @@
         "dest": "/index.html"
       }
     ]
-}
+  }
   
