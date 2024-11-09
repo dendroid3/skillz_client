@@ -47,7 +47,7 @@ const App = () => {
   return (
     <MessagesProvider> 
       <div className="App">
-        {/* <Router>
+        <Router>
           <div className="content">
             <Routes>
               <Route path="/" element={<Home />} />
@@ -63,7 +63,7 @@ const App = () => {
               <Route path='/coursecontent/:courseId' element={<CourseContent />} />
             </Routes>
           </div>
-        </Router> */}
+        </Router>
 
         {/* Install button (hidden by default) */}
         <button
