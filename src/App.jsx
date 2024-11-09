@@ -47,7 +47,7 @@ const App = () => {
   return (
     <MessagesProvider> 
       <div className="App">
-        {/* <Router>
+        <Router>
           <div className="content">
             <Routes>
               <Route path="/" element={<Home />} />
@@ -63,13 +63,13 @@ const App = () => {
               <Route path='/coursecontent/:courseId' element={<CourseContent />} />
             </Routes>
           </div>
-        </Router> */}
+        </Router>
 
         {/* Install button (hidden by default) */}
         <button
           id="installButton"
           onClick={handleInstallClick}
-          style={{ display: 'none', position: 'fixed', bottom: '20px', right: '20px', backgroundColor: '#007bff', color: '#fff', padding: '10px 20px', borderRadius: '5px', border: 'none', cursor: 'pointer', fontSize: '16px' }}
+          style={{ display: '', position: 'fixed', bottom: '20px', right: '20px', backgroundColor: '#007bff', color: '#fff', padding: '10px 20px', borderRadius: '5px', border: 'none', cursor: 'pointer', fontSize: '16px' }}
         >
           Install App
         </button>
