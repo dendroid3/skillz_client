@@ -20,6 +20,8 @@ const App = () => {
       <div className="App">
         <Router>
           <div className="content">
+            <button id="installButton" style="display: none;">Install App</button>
+
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/signin" element={<SignInForm />} />

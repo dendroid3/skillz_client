@@ -9,3 +9,22 @@
     width: calc(100% - 200px); /* Adjust width to accommodate sidebar */
   }
   
+  #installButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  #installButton:hover {
+    background-color: #0056b3;
+  }
+
+  
