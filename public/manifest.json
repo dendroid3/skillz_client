@@ -1,6 +1,6 @@
 {
-    "short_name": "ReactApp",
-    "name": "React App PWA",
+    "short_name": "Skillz",
+    "name": "Online Learning Platform",
     "icons": [
       {
         "src": "icons/icon-192x192.png",
