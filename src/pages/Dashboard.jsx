@@ -48,7 +48,7 @@ const Dashboard = () => {
     <div className="dashboard-container">
       <Sidebar />
       <div className="content-container">
-        {userRole !== 'learner' ? <LearnersDashboard user={user} /> : <InstructorDashboard user={user} />}
+        {userRole === 'learner' ? <LearnersDashboard user={user} /> : <InstructorDashboard user={user} />}
       </div>
     </div>
   );
