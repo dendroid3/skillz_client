@@ -1,0 +1,14 @@
+/* Dashboard styles */
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .content-container {
+    flex: 1;
+    margin-left: 250px; /* Sidebar width */
+    padding: 20px;
+    background-color: #f8f9fa; /* Dashboard background color */
+    overflow-y: auto; /* Scroll if content overflows */
+  }
+  

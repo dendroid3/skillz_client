@@ -1,0 +1,31 @@
+/* usersLists.css */
+.user-card {
+    border: 3px solid #183D3D;
+    border-radius: 50%;
+    overflow: hidden;
+    
+    
+  }
+  
+  .user-card .user-profile-picture {
+    height: 200px;
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  .user-card .card-body {
+    text-align: center;
+    
+  }
+  
+  .user-card .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .user-card .card-text {
+    color: #313030;
+  }
+  
