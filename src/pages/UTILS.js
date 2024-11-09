@@ -1,2 +1,2 @@
-const BASE_URL = 'http://127.0.0.1:5000'
+const BASE_URL = 'https://skillz-api-6411a8af904e.herokuapp.com'
 export default BASE_URL
