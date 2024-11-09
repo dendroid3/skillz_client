@@ -1,9 +1,23 @@
 {
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html",
-      "permanent": false
-    }
-  ]
+    "builds": [
+      {
+        "src": "index.html",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "dist/service-worker.js",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/service-worker.js",
+        "dest": "/dist/service-worker.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
+    ]
 }
+  
