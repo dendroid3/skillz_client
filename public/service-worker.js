@@ -37,24 +37,32 @@ self.addEventListener('activate', (event) => {
 
 // Fetch event - Intercept network requests and serve from cache if available
 self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      // If there's a cached response, return it
-      if (cachedResponse) {
-        return cachedResponse;
-      }
+  const requestUrl = new URL(event.request.url);
 
-      // Otherwise, fetch from the network
-      return fetch(event.request).then((response) => {
-        // Optionally, cache the new response
-        if (response.status === 200) {
-          const responseClone = response.clone();
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, responseClone);
-          });
+  // Only cache requests coming from your domain (e.g., 'https://yourdomain.com')
+  if (requestUrl.origin === location.origin) {
+    event.respondWith(
+      caches.match(event.request).then((cachedResponse) => {
+        // If there's a cached response, return it
+        if (cachedResponse) {
+          return cachedResponse;
         }
-        return response;
-      });
-    })
-  );
+
+        // Otherwise, fetch from the network
+        return fetch(event.request).then((response) => {
+          // Optionally, cache the new response
+          if (response.status === 200) {
+            const responseClone = response.clone();
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(event.request, responseClone);
+            });
+          }
+          return response;
+        });
+      })
+    );
+  } else {
+    // For unsupported request schemes (e.g., chrome-extension://), just fetch them without caching
+    event.respondWith(fetch(event.request));
+  }
 });
