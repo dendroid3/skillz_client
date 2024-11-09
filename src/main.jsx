@@ -17,6 +17,45 @@ if ('serviceWorker' in navigator) {
   });
 }
 
+// Handle beforeinstallprompt event to show the install prompt
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (event) => {
+  // Prevent the default prompt
+  event.preventDefault();
+  
+  // Save the event so it can be triggered later
+  deferredPrompt = event;
+
+  // Show the custom install button
+  const installButton = document.getElementById('installButton');
+  if (installButton) {
+    installButton.style.display = 'block';
+  }
+});
+
+// Handle the install button click
+const installButton = document.getElementById('installButton');
+if (installButton) {
+  installButton.addEventListener('click', () => {
+    // Show the install prompt
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+
+      // Wait for the user's response
+      deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('User accepted the install prompt');
+        } else {
+          console.log('User dismissed the install prompt');
+        }
+        // Reset the deferredPrompt
+        deferredPrompt = null;
+      });
+    }
+  });
+}
+
 // Render the app
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
