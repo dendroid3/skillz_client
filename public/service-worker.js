@@ -39,8 +39,8 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   const requestUrl = new URL(event.request.url);
 
-  // Only cache requests coming from your domain (e.g., 'https://yourdomain.com')
-  if (requestUrl.origin === location.origin) {
+  // Ensure that the request is from a valid HTTP/HTTPS origin, and not from chrome-extension:// or other unsupported schemes
+  if (requestUrl.protocol === 'http:' || requestUrl.protocol === 'https:') {
     event.respondWith(
       caches.match(event.request).then((cachedResponse) => {
         // If there's a cached response, return it
@@ -62,7 +62,7 @@ self.addEventListener('fetch', (event) => {
       })
     );
   } else {
-    // For unsupported request schemes (e.g., chrome-extension://), just fetch them without caching
+    // If the request comes from an unsupported scheme (like chrome-extension://), don't cache it
     event.respondWith(fetch(event.request));
   }
 });
