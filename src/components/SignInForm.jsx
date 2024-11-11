@@ -46,8 +46,6 @@ const SignInForm = () => {
       if (response.ok) {
         setMessages({ successMessage: 'Sign In successful', errorMessage: '' });
 
-
-
         setEmailFor2FA(formData.email);
         setIsModalOpen(true); // Open the modal for 2FA
 

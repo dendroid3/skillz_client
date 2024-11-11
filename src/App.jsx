@@ -22,7 +22,7 @@ const App = () => {
           <div className="content">
             <Routes>
               <Route path="/" element={<Home />} />
-              {/* <Route path="/signin" element={<SignInForm />} />
+              <Route path="/signin" element={<SignInForm />} />
               <Route path="/signup" element={<SignUpForm />} />
               <Route path="/TwoFactorAuth" element={<TwoFactorAuth />} />
               <Route path="/dashboard" element={<Dashboard />} />
@@ -31,7 +31,7 @@ const App = () => {
               <Route path='/profile' element={<Profile/>}/>
               <Route path='/browser' element={< Browser/>}/>
               <Route path='/users' element={<UsersList/>}/>
-              <Route path='/coursecontent/:courseId' element={<CourseContent/>}/> */}
+              <Route path='/coursecontent/:courseId' element={<CourseContent/>}/>
 
             </Routes> 
           </div>
