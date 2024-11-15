@@ -70,8 +70,8 @@ const InstructorDashboard = ({ user }) => {
         </div>
 
         <div>
-            <h2>Instructor List</h2>
-            <table border="1" cellPadding="10" cellSpacing="0">
+            <h3>Instructor List</h3>
+            <table border="1" cellPadding="10" cellSpacing="0" className="text-sm">
                 <thead>
                 <tr>
                     <th>ID</th>
