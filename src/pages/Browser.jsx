@@ -184,7 +184,7 @@ const Browser = () => {
                       />
                       <span>{`${course.instructor?.first_name} ${course.instructor?.last_name}`}</span>
                     </div>
-                    <Link to={`/payment/${course.id}/${learnerId}`}>
+                    <Link to={`/payment/${course.id}/${learnerId}/${course.price}`}>
                     <Button variant="light" style={{ marginTop: '10px' }}>Enroll</Button>
                     </Link>
                   </Card.Body>

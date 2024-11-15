@@ -65,12 +65,6 @@ const Sidebar = () => {
                         {isOpen && <span className="sidebar-menu-item-text">Dashboard</span>}
                     </Link>
                 </li>
-                {/* <li className="sidebar-menu-item">
-                    <Link to="/messages" className="sidebar-menu-item-link">
-                        <FaEnvelope className="sidebar-menu-item-icon" />
-                        {isOpen && <span className="sidebar-menu-item-text">Chats</span>}
-                    </Link>
-                </li> */}
                
                 <li className="sidebar-menu-item">
                     <Link to="/Browser" className="sidebar-menu-item-link">
@@ -100,7 +94,7 @@ const Sidebar = () => {
                                     window.location.href = '/signin';
                                 }}
                             >
-                                <FaSignOutAlt className="logout-button-icon" />
+                                <FaSignOutAlt className="sidebar-menu-item-icon" />
                                 {isOpen && <span className="logout-button-text">Logout</span>}
                             </button>
                         </li>

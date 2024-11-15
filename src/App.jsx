@@ -27,7 +27,7 @@ const App = () => {
               <Route path="/TwoFactorAuth" element={<TwoFactorAuth />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/messages" element={<MessagesPage />} />
-              <Route path="/payment/:courseId/:learnerId" element={<PaymentPage />} />
+              <Route path="/payment/:courseId/:learnerId/:price" element={<PaymentPage />} />
               <Route path='/profile' element={<Profile/>}/>
               <Route path='/browser' element={< Browser/>}/>
               <Route path='/users' element={<UsersList/>}/>

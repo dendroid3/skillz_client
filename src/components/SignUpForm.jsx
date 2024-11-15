@@ -8,7 +8,7 @@ const SignUpForm = () => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
-    role: 'Instructor',
+    role: 'instructor',
     email: '',
     password: '',
     confirmPassword: '',
@@ -62,7 +62,7 @@ const SignUpForm = () => {
         setFormData({
           firstName: '',
           lastName: '',
-          role: 'Instructor',
+          role: 'instructor',
           email: '',
           password: '',
           confirmPassword: '',
@@ -138,7 +138,7 @@ const SignUpForm = () => {
                 onChange={handleChange}
                 required
               >
-                <option value="Instructor">Instructor</option>
+                <option value="instructor">Instructor</option>
                 <option value="learner">Learner</option>
               </select>
             </div>

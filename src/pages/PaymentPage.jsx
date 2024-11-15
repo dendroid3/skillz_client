@@ -16,7 +16,7 @@ const paymentMethods = [
 ];
 
 const PaymentPage = () => {
-  const { courseId, learnerId } = useParams(); // Access the parameters from the URL
+  const { courseId, learnerId, price } = useParams(); // Access the parameters from the URL
   
   const [paymentMethod, setPaymentMethod] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -25,12 +25,16 @@ const PaymentPage = () => {
   const handlePhoneSubmit = async (phoneNumber) => {
     try {
       setLoading(true);
+
+      const price_string = price;
+      const amount = Math.floor(Number(price_string));
+
       const response = await fetch(`${BASE_URL}/payments/sendSTKPush`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ phone: phoneNumber, amount: 10 }), // Example amount
+        body: JSON.stringify({ phone: phoneNumber, amount: amount }), // Example amount
       });
 
       if (!response.ok) {
