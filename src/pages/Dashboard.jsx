@@ -49,16 +49,13 @@ const Dashboard = () => {
     <div className="dashboard-container">
       <Sidebar />
       <div className="content-container">
-      {/* {userRole === 'learner' || userRole === 'Learner'? (
-          <LearnersDashboard user={user} />
-      ) : userRole === 'instructor' || userRole === 'Instructor' ? (
-          <InstructorDashboard user={user} />
-      ) : userRole === 'admin' || userRole === 'Admin'? (
-          <AdminDashboard user={user} />
-      ) : null} */}
-
-        <InstructorDashboard user={user} />
-
+        {userRole === 'learner' || userRole === 'Learner'? (
+            <LearnersDashboard user={user} />
+        ) : userRole === 'instructor' || userRole === 'Instructor' ? (
+            <InstructorDashboard user={user} />
+        ) : userRole === 'admin' || userRole === 'Admin'? (
+            <AdminDashboard user={user} />
+        ) : null}
 
       </div>
     </div>

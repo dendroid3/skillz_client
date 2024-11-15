@@ -139,7 +139,7 @@ function Home() {
         <Row>
           <Col className="header-col">
             <div className="header-content">
-              <h2><b>Become a Pro with thousands of creative classes</b></h2>
+              <h4><b>Become a Pro with thousands of creative classes</b></h4>
               <Button className="get-started-btn" onClick={handleGetStarted} >Get Started</Button>
               {isLoggedIn && (
                 <NavLink to={'/dashboard'}>
