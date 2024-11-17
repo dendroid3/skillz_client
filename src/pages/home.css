@@ -1,7 +1,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #FFFFFF;
-    font-size: xx-large;
+    font-size: x-large;
 }
 
 .navbarDiv {
@@ -51,6 +51,7 @@ body {
     color: rgb(0, 0, 0);
     align-items: center;
     padding-left: 20px;
+    font-size: 1rem;
 }
 
 .desc {
@@ -59,6 +60,7 @@ body {
     height: 800px;
     transform: translateY(-46px);
     margin-left: 12px;
+    font-size: 1rem;
 }
 
 .creative-learning {
@@ -105,7 +107,7 @@ body {
     color: white;
     border-radius: 15px;
     transform: translateY(-400%);
-    font-size: large;
+    font-size: medium;
 }
 .get-started-btn{
     border:1px transparent ;

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import backgroundImage from './p5si.webp';
+import backgroundImage from './s_in.jpg';
 import TwoFactorAuth from './TwoFactorAuth'; // Import the modal component
 import BASE_URL from '../pages/UTILS';
 

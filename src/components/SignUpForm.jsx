@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import backgroundImage from './p5su.jpeg';
+import backgroundImage from './s_up.jpg';
 import BASE_URL from '../pages/UTILS';
 
 const SignUpForm = () => {

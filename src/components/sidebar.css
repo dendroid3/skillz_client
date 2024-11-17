@@ -34,13 +34,13 @@
 }
 
 .sidebar-title {
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 
 .sidebar-button {
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 .sidebar-menu {
@@ -72,7 +72,7 @@
 }
 
 .sidebar-menu-item-icon {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 .sidebar-menu-item-text {
@@ -129,7 +129,7 @@
 }
 
 .logout-button-icon {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 .logout-button-text {

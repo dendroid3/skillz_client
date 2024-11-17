@@ -70,7 +70,7 @@ const InstructorDashboard = ({ user }) => {
         </div>
 
         <div>
-            <h3 className="text-lg">Instructor List</h3>
+            <h3 className="text-sm">Instructor List</h3>
             <table border="1" cellPadding="10" cellSpacing="0" className="text-sm">
                 <thead>
                 <tr>
@@ -92,6 +92,7 @@ const InstructorDashboard = ({ user }) => {
                         backgroundColor:'#1a4b4b',
                         borderColor: '#183d3d',
                         }}
+                        size="sm"
                         onClick={() => handleRemoveInstructor(instructor.email)}
                     >
                         Remove 
