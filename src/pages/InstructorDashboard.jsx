@@ -130,7 +130,9 @@ const InstructorDashboard = ({ user }) => {
                       />
                       <span>{`${course.instructor?.first_name} ${course.instructor?.last_name}`}</span>
                   </div>
-                  <p className="text-gray-700">{course.description}</p>
+                  <p className="text-gray-700">
+                    {course.description.length > 50 ? course.description.substring(0, 50) + '...' : course.description}
+                  </p>
                 </div>
               ))}
             </div>

@@ -1,8 +1,12 @@
 {
-    "rewrites": [
-      {
-        "source": "/(.*)",
-        "destination": "/index.html"
-      }
-    ]
+  "rewrites": [
+    {
+      "source": "/icons/:file",
+      "destination": "/public/icons/:file"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
