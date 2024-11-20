@@ -17,22 +17,37 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-// Handle beforeinstallprompt event to show the install prompt
 let deferredPrompt;
 
 window.addEventListener('beforeinstallprompt', (event) => {
-  // Prevent the default prompt
+  // Prevent the default mini-infobar from appearing
   event.preventDefault();
-  console.log('beforeinstallprompt fired');
   
   // Save the event so it can be triggered later
   deferredPrompt = event;
-
-  // Show the custom install button
+  
+  // Optionally, update your UI to notify the user they can install the PWA
   const installButton = document.getElementById('installButton');
-  if (installButton) {
-    installButton.style.display = 'block';
-  }
+  installButton.style.display = 'block';
+  
+  installButton.addEventListener('click', () => {
+    // Show the install prompt
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+
+      // Wait for the user to respond to the prompt
+      deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('User accepted the install prompt');
+        } else {
+          console.log('User dismissed the install prompt');
+        }
+        
+        // Clear the deferredPrompt so it can only be used once
+        deferredPrompt = null;
+      });
+    }
+  });
 });
 
 // Handle the install button click
