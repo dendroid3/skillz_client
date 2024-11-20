@@ -365,11 +365,8 @@ const CourseContent = () => {
                                                 <h4 className="mb-1 mt-4 underline">Assignment (*/{answer.max_grade})</h4>
                                                 {answer.assignment}
 
-                                                {(gradedAnswer.length > 0 || unGradedAnswer) ? (
-                                                    <h4 className="mb-1 mt-4 underline">Answers</h4>
-                                                ) : (
-                                                    <h4 className="mb-1 mt-4">No Answers Submitted yet.</h4>
-                                                )}
+                                                <h4 className="mb-1 mt-4 underline">Answers</h4>
+
                                                 {answer.answers_with_grade[0] &&
                                                     <> 
                                                     <h5 className="mb-1 underline">(Graded)</h5>
